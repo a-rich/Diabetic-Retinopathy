@@ -17,7 +17,7 @@ def resizeImage(args):
   image.save('./data/train_resized/' + args[2] + '/' + args[1])
 
 def performPCA(source, num_components, chunk_size):
-  image_paths = listdir(source)
+  image_paths = sorted(listdir(source), key=lambda x: (int(x.split('_')[0]), x.split('_')[1]))
   size, images = 0, []
   n_chunks = len(image_paths)//chunk_size
   pca = IncrementalPCA(n_components=num_components, batch_size=chunk_size)
