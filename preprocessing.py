@@ -79,7 +79,6 @@ if __name__ == "__main__":
 
   # Performs incremental PCA on all images in `source` path...
   # Dumps binary file with a numpy matrix of transformed training data
-  """
   source = './data/train_resized/32x32/'
   num_components = 8
   chunk_size = 1000
@@ -87,5 +86,4 @@ if __name__ == "__main__":
   transformedMatrix = performPCA(source, num_components, chunk_size)
   print("Performed PCA in {0} seconds".format(time.time() - start))
   normed_matrix = normalize(transformedMatrix)
-  pickle.dump(normed_matrix, open('data/reduced_data.bin', 'wb'))
-  """
+  pickle.dump(normed_matrix, open('data/reduced_data.bin', 'wb'), protocol=2)
