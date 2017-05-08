@@ -1,7 +1,10 @@
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
-
+# Rewritten by: Omar Mousa
+# Referenced from Alex's Preprocessing file
+# Googles Bulid_an_image
+# and the referenced tensormodel script all combined
 
 import os
 import time
